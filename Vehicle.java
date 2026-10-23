@@ -44,10 +44,6 @@ public class Vehicle {
     }
 
     public boolean isVintage() {
-        if (calculateAge() > 25) {
-            return true;
-        } else {
-            return false;
-        }
+        return calculateAge() > 25;
     }
 }
