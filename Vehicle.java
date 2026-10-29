@@ -1,4 +1,4 @@
-public class Vehicle {
+abstract class Vehicle {
     private String brand;
     private String model;
     private int year;
@@ -46,4 +46,10 @@ public class Vehicle {
     public boolean isVintage() {
         return calculateAge() > 25;
     }
+
+   public abstract void moveForward();
+   public abstract void moveBackwards();
+   public abstract void moveLeft();
+   public abstract void moveRight();
 }
+      

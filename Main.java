@@ -38,5 +38,14 @@
             printDetails(currentVehicle);
             System.out.println();
         }
+
+        for (Vehicle currentVehicle : vehicles) {
+    printDetails(currentVehicle);
+    currentVehicle.moveForward();
+    currentVehicle.moveBackwards();
+    currentVehicle.moveLeft();
+    currentVehicle.moveRight();
+    System.out.println();
+}
     }
 }
