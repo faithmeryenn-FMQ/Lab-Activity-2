@@ -1,78 +1,51 @@
-public class Main
-{
-    public static void main(String[] args)
-    {
+ public class Main {
 
-        Vehicle v1 = new Vehicle("Toyota", "Corolla", 2020);
-        Vehicle v2 = new Vehicle("Honda", "Civic", 2020);
-        Vehicle v3 = new Vehicle("Ford ", "Mustang ", 2010);
+    public static void printDetails(Vehicle vehicle) {
+        vehicle.displayInfo();
+    }
 
-        v1.displayInfo();
-        System.out.println("Brand:" + v1.getBrand());
-        System.out.println("Model:" + v1.getModel());
-        System.out.println("Year:" + v1.getYear());
-        System.out.println("Age:" + v1.calculateAge());
-        System.out.println("Is Vintage? " + v1.isVintage());
-        System.out.println();
-        
-        v2.displayInfo();
-        System.out.println("Brand:" + v2.getBrand());
-        System.out.println("Model:" + v2.getModel());
-        System.out.println("Year:" + v2.getYear());
-        System.out.println("Age:" + v2.calculateAge());
-        System.out.println("Is Vintage? " + v2.isVintage());
+    public static void main(String[] args) {
+        Vehicle vehicle = new Truck("Fuso", "Fuso FJ 2828R", 2026, 10);
+        vehicle.displayInfo();
         System.out.println();
 
+        vehicle = new Car("Ford", "Ranger", 2020, 4);
+        vehicle.displayInfo();
 
-        v3.displayInfo();
-        System.out.println("Brand:" + v3.getBrand());
-        System.out.println("Model:" + v3.getModel());
-        System.out.println("Year:" + v3.getYear());
-        System.out.println("Age:" + v3.calculateAge());
-        System.out.println("Is Vintage? " + v3.isVintage());
+        vehicle = new Motorcycle("Yamaha", "Raider Fi", 2017, "150cc");
+        vehicle.displayInfo();
         System.out.println();
 
-        System.out.println("setYear(2000): " + v1.setYear(2000));
-        System.out.println("Year:" + v1.getYear());
-        System.out.println("Age: " + v1.calculateAge());
-        System.out.println("Is vintage? " + v1.isVintage());
+        Truck truck = new Truck("Fuso", "Fuso FJ 2828R", 2026, 10);
+        printDetails(truck);
         System.out.println();
 
-        System.out.println("setYear(1885): " + v1.setYear(1885));
-        System.out.println("Year: " + v1.getYear());
+        Car car = new Car("Ford", "Ranger", 2020, 4);
+        printDetails(car);
         System.out.println();
 
-        System.out.println("setYear(2027): " + v1.setYear(2027));
-        System.out.println("Year: " + v1.getYear());
+        Motorcycle motor = new Motorcycle("Yamaha", "Raider Fi", 2017, "150cc");
+        printDetails(motor);
         System.out.println();
 
-        Vehicle v4 = new Vehicle("Toyota", "Corolla", 1885);
-        System.out.println("New vehicle with year 1885");
-        System.out.println("Initial year is " + v4.getYear());
-        System.out.println();
+        Vehicle[] vehicles = {
+            new Truck("Fuso", "Fuso FJ 2828R", 2026, 10),
+            new Car("Ford", "Ranger", 2020, 4),
+            new Motorcycle("Yamaha", "Raider Fi", 2017, "150cc")
+        };
 
-        Vehicle v5 = new Vehicle("Toyota", "Corolla", 2027);
-        System.out.println("New vehicle with year 2027");
-        System.out.println("Initial year is " + v5.getYear());
+        for (Vehicle currentVehicle : vehicles) {
+            printDetails(currentVehicle);
+            System.out.println();
+        }
 
-
-        
-
-        Vehicle v1 = new Vehicle("Toyota", "Corolla ", 2020);
-        Vehicle v2 = new Vehicle("Honda", "Civic", 2020);
-        Vehicle v3 = new Vehicle("Ford ", "Mustang ", 2020);
-
-        v1.displayInfo();
-            System.out.println("Age: " + v1.calculateAge());
-            System.out.println("Vintage: " + v1.calculateVintage());
-
-         v2.displayInfo();
-            System.out.println("Age: " + v2.calculateAge());
-            System.out.println("Vintage: " + v2.calculateVintage());
-        
-        v3.displayInfo();
-           System.out.println("Age: " + v3.calculateAge());
-            System.out.println("Vintage: " + v3.calculateVintage());
-
+        for (Vehicle currentVehicle : vehicles) {
+    printDetails(currentVehicle);
+    currentVehicle.moveForward();
+    currentVehicle.moveBackwards();
+    currentVehicle.moveLeft();
+    currentVehicle.moveRight();
+    System.out.println();
+}
     }
 }
