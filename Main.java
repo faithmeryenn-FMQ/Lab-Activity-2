@@ -4,6 +4,10 @@
         vehicle.displayInfo();
     }
 
+         public static void performService(Serviceable item){
+     item.service();
+    }
+
     public static void main(String[] args) {
         Vehicle vehicle = new Truck("Fuso", "Fuso FJ 2828R", 2026, 10);
         vehicle.displayInfo();
@@ -47,5 +51,22 @@
     currentVehicle.moveRight();
     System.out.println();
 }
+
+    Serviceable car2 = new Car("Ford", "Ranger", 2020, 4);
+     motor = new Motorcycle("Yamaha", "Raider Fi", 2017, "150cc");
+     truck = new Truck("Fuso", "Fuso FJ 2828R", 2026, 10);
+      Serviceable printer = new Printer();
+      
+      Serviceable[] items = {
+         car2,
+         motor, 
+         truck,
+         printer
+      };
+      
+      for (Serviceable currentItem: items) {
+         performService(currentItem);
+     }
+
     }
 }

@@ -1,4 +1,4 @@
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Serviceable{
 
     int numberOfDoors;
 
@@ -32,6 +32,14 @@ public class Car extends Vehicle {
     public void moveRight() {
         System.out.println("A Car moves right");
     }
+
+       @Override
+          public void service(){
+            System.out.println("Car: check oil and brakes.");
+           
+          
+        }
+
 }
    
     
