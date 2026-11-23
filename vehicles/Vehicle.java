@@ -1,8 +1,10 @@
-abstract class Vehicle {
+package vehicles;
+public abstract class Vehicle {
+      //FIELDS
     private String brand;
     private String model;
     private int year;
-
+        //CONSTRUCTORS
     public Vehicle(String brand, String model, int year) {
         this.brand = brand;
         this.model = model;

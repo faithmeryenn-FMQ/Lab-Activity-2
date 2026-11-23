@@ -1,3 +1,6 @@
+package vehicles;
+import interfaces.Serviceable;
+
 public class Truck extends Vehicle implements Serviceable{
 
    int numberOfWheels;
@@ -35,8 +38,7 @@ System.out.println("Number of Wheels: " + numberOfWheels);
          @Override
           public void service(){
             System.out.println("Truck: inspect cargo brakes. ");
-           
-        
         }
+        
 
 }

@@ -1,4 +1,10 @@
- public class Main {
+import interfaces.Serviceable;
+import vehicles.Car;
+import vehicles.Motorcycle;
+import vehicles.Truck;
+import vehicles.Vehicle;
+
+public class Main {
 
     public static void printDetails(Vehicle vehicle) {
         vehicle.displayInfo();

@@ -1,3 +1,5 @@
+package vehicles;
+import interfaces.Serviceable;
 public class Car extends Vehicle implements Serviceable{
 
     int numberOfDoors;

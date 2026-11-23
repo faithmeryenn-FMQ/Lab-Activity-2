@@ -1,3 +1,5 @@
+package vehicles;
+import interfaces.Serviceable;
 public class Motorcycle extends Vehicle implements Serviceable{
 
    String engineType;
